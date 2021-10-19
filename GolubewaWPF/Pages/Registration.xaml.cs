@@ -71,7 +71,7 @@ namespace GolubewaWPF
                     BD.BaseModel.users_to_traits.Add(users_To_Traits);
                 }
                 BD.BaseModel.SaveChanges();
-                MessageBox.Show("Вы успешно зарегестрировались!");
+                MessageBox.Show("Приветствуем нового пользователя");
             }
             catch (Exception exp)
             {
