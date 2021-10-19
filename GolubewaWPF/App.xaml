@@ -1,0 +1,16 @@
+﻿<Application x:Class="GolubewaWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GolubewaWPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Foreground" Value="black"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="reklama">
+            <Setter Property="Background" Value="#FFECEC52"/>
+        </Style>
+    </Application.Resources>
+</Application>
