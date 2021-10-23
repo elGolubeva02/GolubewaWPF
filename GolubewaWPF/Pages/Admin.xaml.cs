@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassLibrary1;
 
 namespace GolubewaWPF
 {
@@ -26,7 +27,6 @@ namespace GolubewaWPF
             InitializeComponent();
             users = BD.BaseModel.users.ToList();
             lbUsersList.ItemsSource = users;
-
         }
         private void lbTraits_Loaded(object sender, RoutedEventArgs e)
         {

@@ -23,6 +23,10 @@
                     <Button Content ="Регистрация" Name="btnRegistr" Click="btnRegistr_Click" HorizontalAlignment="Stretch">
 
                     </Button>
+                    <Button Content ="Выборки" Name="btnFuf" Click="btnFuf_Click" HorizontalAlignment="Stretch">
+
+                    </Button>
+
 
 
 

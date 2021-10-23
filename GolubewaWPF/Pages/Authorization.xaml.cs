@@ -62,5 +62,9 @@ namespace GolubewaWPF
         {
             PagesCh.switchPage.Navigate(new Registration()) ;
         }
+        private void btnFuf_Click(object sender, RoutedEventArgs e)
+        {
+            PagesCh.switchPage.Navigate(new Dll());
+        }
     }
 }
