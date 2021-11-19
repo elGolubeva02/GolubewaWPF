@@ -24,7 +24,8 @@
                         <GroupBox Header="Качества личности">
                             <TextBlock x:Name="TBCharacter" />
                         </GroupBox>
-
+                        <Image x:Name="UserImage" Loaded="UserImage_Loaded" Uid="{Binding id}" Width="150" Height="100" />
+                        <Button Content="Выбрыть аватар" Name="btnAvatar"  Click="btnAvatar_Click"/>
                         <Button Content="Назад" Name="btnBack"  Click="btnBack_Click"/>
                     </StackPanel>
                 </GroupBox>

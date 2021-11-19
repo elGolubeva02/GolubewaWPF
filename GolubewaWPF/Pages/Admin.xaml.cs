@@ -168,11 +168,11 @@ namespace GolubewaWPF
                 usersimage UI = new usersimage() { id_user = ind, image = ByteArr };
                 BD.BaseModel.usersimage.Add(UI);
                 BD.BaseModel.SaveChanges();
-                MessageBox.Show("картинка пользователя добавлена в базу");
+                MessageBox.Show("Картинка пользователя добавлена в базу");
             }
             else
             {
-                MessageBox.Show("операция выбора изображения отменена");
+                MessageBox.Show("Операция выбора изображения отменена");
             }
         }
         private void Sort_Click(object sender, RoutedEventArgs e)
@@ -190,7 +190,6 @@ namespace GolubewaWPF
             if (RBReverse.IsChecked == true) lu1.Reverse();
             lbUsersList.ItemsSource = lu1;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
