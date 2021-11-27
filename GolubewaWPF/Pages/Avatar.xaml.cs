@@ -21,22 +21,54 @@ namespace GolubewaWPF
     /// </summary>
     public partial class Avatar : Page
     {
-        public int ind;
-        public Avatar(auth CurrentUser)
-        {
-            InitializeComponent();
-            ind = CurrentUser.users.id;
-        }
-        private void UserImage_Loaded(object sender, RoutedEventArgs e)
-        {
-            users U = BD.BaseModel.users.FirstOrDefault(x => x.id == ind);
-            usersimage UI = BD.BaseModel.usersimage.FirstOrDefault(x => x.id_user == ind);
-            BitmapImage BI = new BitmapImage();
-            if (UI != null)
-            {
-                Button button = new Button();
-                this.Controls.Add(button);
-            }
-        }
+    //    public List<usersimage> UI { get; set; }
+    //    public users U { get; set; }
+    //    public int ind;
+    //    int userImg;
+    //    public Avatar(auth CurrentUser)
+    //    {
+    //        InitializeComponent();
+    //        ind = CurrentUser.users.id;
+    //    }
+    //    private void UserImage_Loaded(object sender, RoutedEventArgs e)
+    //    {
+    //        U = BD.BaseModel.users.FirstOrDefault(x => x.id == ind);
+    //        UI = BD.BaseModel.usersimage.Where(x => x.id_user == ind).ToList();
+    //        UI.Reverse();
+    //        BitmapImage BI = new BitmapImage();
+    //        try
+    //        {
+    //            if (UI != null)
+    //            {
+    //                if (UI[userImg].path != null)
+    //                {
+    //                    BI = new BitmapImage(new Uri(UI[userImg].path, UriKind.Relative));
+    //                }
+    //                else
+    //                {
+    //                    BI.BeginInit();
+    //                    BI.StreamSource = new MemoryStream(UI[userImg].image);
+    //                    BI.EndInit();
+    //                }
+    //                UserImage.Source = BI;
+    //            }
+    //            else
+    //            {
+    //                switch (U.gender)
+    //                {
+    //                    case 1:
+    //                        BI = new BitmapImage(new Uri(@"/Image/man.png", UriKind.Relative));
+    //                        break;
+    //                    case 2:
+    //                        BI = new BitmapImage(new Uri(@"/Image/woman.png", UriKind.Relative));
+    //                        break;
+    //                    default:
+    //                        BI = new BitmapImage(new Uri(@"/Image/other.png", UriKind.Relative));
+    //                        break;
+    //                }
+    //            }
+    //        }
+    //        catch { }
+    //    }
     }
 }

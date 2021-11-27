@@ -26,6 +26,7 @@ namespace GolubewaWPF
         List<users> users;
         List<users> lu1;
         PageChange pc = new PageChange();
+
         public Admin()
         {
             InitializeComponent();
@@ -218,6 +219,20 @@ namespace GolubewaWPF
         private void btnNewUser_Click(object sender, RoutedEventArgs e)
         {
             PagesCh.switchPage.Navigate(new Registration());
+        }
+        private void TextBlock_Loaded(object sender, RoutedEventArgs e)
+        {
+            TextBlock tb = (TextBlock)sender;
+            int index = Convert.ToInt32(tb.Uid);
+            users us = BD.BaseModel.users.FirstOrDefault(x => x.id == index);
+            var today = DateTime.Today;
+            int Vozrast = today.Year - us.dr.Year;
+            if (us.dr.Date > today.AddYears(Convert.ToInt32(-Vozrast))) Vozrast--;
+            if (us != null && Vozrast > 1)
+            {
+
+                tb.Foreground = System.Windows.Media.Brushes.Red;
+            }
         }
     }
 }
