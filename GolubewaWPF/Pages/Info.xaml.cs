@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using GolubewaWPF.Pages;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -87,9 +88,9 @@ namespace GolubewaWPF
         }
         private void btnAvatar_Click(object sender, RoutedEventArgs e)
         {
-            Avatar ava = new Avatar();
-            ava.Visibility = Visibility.Visible;
-            this.Visibility = Visibility.Hidden;
+            //System.Windows.Controls.Image im = (System.Windows.Controls.Image)sender;
+            Ava G = new Ava(ind);
+            G.Show();
         }
     }
 }
